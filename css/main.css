@@ -95,40 +95,92 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
 html {
-  background-color: #00e6e6;
+  background-color: #fff;
   height: 100%;
+  width: 100%;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
+  padding: 0 2em;
   font-size: 1.25em;
   height: 100%;
+  color: #fff;
 }
 
-.wrapper {
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+footer,
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background-color: #07575B;
+  height: 80px;
+  width: 100%;
+  padding-left: 1.5em;
+}
+
+main {
+  background-color: #66A5AD;
+  height: 250px;
+  width: 100%;
+  text-align: right;
+  padding: 0 2em;
+}
+
+footer {
+  background-color: #07575B;
+  height: 20px;
+  width: 100%;
+}
+
+
+#div-1,
+#div-2,
+#div-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #505050;
+  line-height: 1.65em;
+  font-size: 1em;
+  padding: 0 .75em;
+  height: auto;
+}
+
+.wrapper span {
+  font-family: 'Lora', sans-serif;
+  font-size: 1.3em;
+}
+
+.flex-container {
   display: flex;
   justify-content: space-between;
-  font-weight: 700;
+  align-items: stretch;
+  flex-flow: wrap;
 }
 
-.div-1, .div-2, .div-3 {
-  width: 30%;
+.flex-items {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #505050;
   line-height: 1.5em;
-  padding: 0 .5em 0 .5em;
-  font-size: 1.1em;
-  text-align: justify;
-  border: solid .1em #505050;
-  background: #fff;
-  height: 250px;
+  font-size: 1em;
+  text-align: left;
+  background-color: #C4DFE6;
+  width: 30%;
+  height: 200px;
 }
-
 
 /* ==========================================================================
    Helper classes
@@ -209,6 +261,23 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+@media all and (max-width: 768px) {
+    body {
+      padding: 1em;
+    }
+}
+
+@media (min-width: 1200px) {
+  #div-1,
+  #div-2{
+      /* set your flex value to 1 50% */
+  }
+
+  #div-3 {
+    /* set your flex value to 1 100% */
+  }
+}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
